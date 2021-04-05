@@ -1,0 +1,17 @@
+Test_vectors_default 14 0.000236113
+Test_vectors_dim_20 14 0.000233293
+Test_vectors_dim_1000 8 0.000419925
+Test_vectors_dim_10000 8 0.00115429
+Test_matrix_default 3 0.00136698
+Test_matrix_dim_20 2 0.00171929
+Test_matrix_dim_1000 2 0.374235
+Test_matrix_dim_10000 2 51.2213
+Test_pcg_default 0 0
+Test_pcg_dim_20 0 0
+Test_pcg_dim_1000 0 0
+Test_pcg_dim_10000 0 0
+---
+Test_pcg_default
+Test_pcg_dim_20
+Test_pcg_dim_1000
+Test_pcg_dim_10000

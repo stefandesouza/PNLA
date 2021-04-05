@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../tests/../include/vector_parallel.h
+vector
+-
+omp.h
+-
+memory
+-
+utility
+-
+
+../tests/../include/vector_seq.h
+vector
+-
+
+/home/nuss/91/bt717591/PNLA_Stefan/tests/test_vectors.cpp
+iostream
+-
+limits
+-
+vector_seq.h
+-
+vector_parallel.h
+-
+cmath
+-
+chrono
+-
+
