@@ -1,0 +1,150 @@
+\hypertarget{classpnla_1_1VectorRn}{}\section{pnla\+:\+:Vector\+Rn Class Reference}
+\label{classpnla_1_1VectorRn}\index{pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}}
+
+
+{\ttfamily \#include $<$vector\+\_\+seq.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpnla_1_1VectorRn_abd7ba1abf8c8943bd1ad2f00eb8f5388}{Vector\+Rn}} (const int dim, const int mode=0, const double constant\+Entry=0.\+0, const std\+::vector$<$ double $>$ \&y=\{\})
+\begin{DoxyCompactList}\small\item\em Construct a new vector object, whose entries depends on the parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpnla_1_1VectorRn_a1618d4527ffb8c189e5136269bcfee69}{copy\+Vector}} (\mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} Vector1, const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} Vector2)
+\begin{DoxyCompactList}\small\item\em Copes the contents of \textquotesingle{}Vector2\textquotesingle{} onto \textquotesingle{}Vector1\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpnla_1_1VectorRn_a714193738ca2ff902d6a7165eeabc15f}{scale\+Vector}} (\mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} given\+Vector, const double alpha)
+\begin{DoxyCompactList}\small\item\em Scales a given vector by a double \textquotesingle{}alpha\textquotesingle{}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpnla_1_1VectorRn_a70c593f6a54a97cbdcab7bad1da3b6f0}{dot\+Product}} (const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} Vector1, const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} Vector2)
+\begin{DoxyCompactList}\small\item\em Calculates the dot product of \textquotesingle{}Vector1\textquotesingle{} with \textquotesingle{}Vector2\textquotesingle{}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpnla_1_1VectorRn_a7774eecc9a019112934833d2e63b3fa5}{norm}} (const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} Vector1)
+\begin{DoxyCompactList}\small\item\em Finds the norm of a given vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpnla_1_1VectorRn_aba4879f9a6b1414d83ba17beed034361}{scaled\+Addition}} (const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} Vector1, \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}} Vector2, const double alpha)
+\begin{DoxyCompactList}\small\item\em Scales the \textquotesingle{}Vector1\textquotesingle{} by a double \textquotesingle{}alpha\textquotesingle{} and adds it to \textquotesingle{}Vector2\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpnla_1_1VectorRn_af130ef239860e17ab15644b1bd6d5896}\label{classpnla_1_1VectorRn_af130ef239860e17ab15644b1bd6d5896}} 
+int {\bfseries dimension}
+\item 
+\mbox{\Hypertarget{classpnla_1_1VectorRn_ab8d6d85f5ba243494a38842fe2e9a21d}\label{classpnla_1_1VectorRn_ab8d6d85f5ba243494a38842fe2e9a21d}} 
+std\+::vector$<$ double $>$ {\bfseries values}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Start here with the defenition of your struct/class for storing a vector of doubles 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpnla_1_1VectorRn_abd7ba1abf8c8943bd1ad2f00eb8f5388}\label{classpnla_1_1VectorRn_abd7ba1abf8c8943bd1ad2f00eb8f5388}} 
+\index{pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}!Vector\+Rn@{Vector\+Rn}}
+\index{Vector\+Rn@{Vector\+Rn}!pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}}
+\subsubsection{\texorpdfstring{Vector\+Rn()}{VectorRn()}}
+{\footnotesize\ttfamily pnla\+::\+Vector\+Rn\+::\+Vector\+Rn (\begin{DoxyParamCaption}\item[{const int}]{dim,  }\item[{const int}]{mode = {\ttfamily 0},  }\item[{const double}]{constant\+Entry = {\ttfamily 0.0},  }\item[{const std\+::vector$<$ double $>$ \&}]{y = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new vector object, whose entries depends on the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dim} & The intended dimension of the vector \\
+\hline
+{\em mode} & Decides on the entries of the vector. 0\+: Linear entries with x\mbox{[}i\mbox{]} = i 1\+: Constant entries with a given double \textquotesingle{}constant\+Entry\textquotesingle{} 2\+: Assigns vector entries from a given vector \textquotesingle{}y\textquotesingle{} \\
+\hline
+{\em constant\+Entry} & The value of every vector element \\
+\hline
+{\em y} & A given vector whose values determine what our object contains \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpnla_1_1VectorRn_a1618d4527ffb8c189e5136269bcfee69}\label{classpnla_1_1VectorRn_a1618d4527ffb8c189e5136269bcfee69}} 
+\index{pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}!copy\+Vector@{copy\+Vector}}
+\index{copy\+Vector@{copy\+Vector}!pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}}
+\subsubsection{\texorpdfstring{copy\+Vector()}{copyVector()}}
+{\footnotesize\ttfamily void pnla\+::\+Vector\+Rn\+::copy\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{Vector1,  }\item[{const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{Vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copes the contents of \textquotesingle{}Vector2\textquotesingle{} onto \textquotesingle{}Vector1\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector1} & \\
+\hline
+{\em Vector2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpnla_1_1VectorRn_a70c593f6a54a97cbdcab7bad1da3b6f0}\label{classpnla_1_1VectorRn_a70c593f6a54a97cbdcab7bad1da3b6f0}} 
+\index{pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}!dot\+Product@{dot\+Product}}
+\index{dot\+Product@{dot\+Product}!pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}}
+\subsubsection{\texorpdfstring{dot\+Product()}{dotProduct()}}
+{\footnotesize\ttfamily double pnla\+::\+Vector\+Rn\+::dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{Vector1,  }\item[{const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{Vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the dot product of \textquotesingle{}Vector1\textquotesingle{} with \textquotesingle{}Vector2\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector1} & \\
+\hline
+{\em Vector2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpnla_1_1VectorRn_a7774eecc9a019112934833d2e63b3fa5}\label{classpnla_1_1VectorRn_a7774eecc9a019112934833d2e63b3fa5}} 
+\index{pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}!norm@{norm}}
+\index{norm@{norm}!pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}}
+\subsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily double pnla\+::\+Vector\+Rn\+::norm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{Vector1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the norm of a given vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+Vector} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpnla_1_1VectorRn_aba4879f9a6b1414d83ba17beed034361}\label{classpnla_1_1VectorRn_aba4879f9a6b1414d83ba17beed034361}} 
+\index{pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}!scaled\+Addition@{scaled\+Addition}}
+\index{scaled\+Addition@{scaled\+Addition}!pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}}
+\subsubsection{\texorpdfstring{scaled\+Addition()}{scaledAddition()}}
+{\footnotesize\ttfamily void pnla\+::\+Vector\+Rn\+::scaled\+Addition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{Vector1,  }\item[{\mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{Vector2,  }\item[{const double}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scales the \textquotesingle{}Vector1\textquotesingle{} by a double \textquotesingle{}alpha\textquotesingle{} and adds it to \textquotesingle{}Vector2\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector1} & \\
+\hline
+{\em Vector2} & \\
+\hline
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpnla_1_1VectorRn_a714193738ca2ff902d6a7165eeabc15f}\label{classpnla_1_1VectorRn_a714193738ca2ff902d6a7165eeabc15f}} 
+\index{pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}!scale\+Vector@{scale\+Vector}}
+\index{scale\+Vector@{scale\+Vector}!pnla\+::\+Vector\+Rn@{pnla\+::\+Vector\+Rn}}
+\subsubsection{\texorpdfstring{scale\+Vector()}{scaleVector()}}
+{\footnotesize\ttfamily void pnla\+::\+Vector\+Rn\+::scale\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpnla_1_1VectorRn}{Vector\+Rn}}}]{given\+Vector,  }\item[{const double}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scales a given vector by a double \textquotesingle{}alpha\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+Vector} & \\
+\hline
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{vector__seq_8h}{vector\+\_\+seq.\+h}}\end{DoxyCompactItemize}

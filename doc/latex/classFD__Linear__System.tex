@@ -1,0 +1,148 @@
+\hypertarget{classFD__Linear__System}{}\section{F\+D\+\_\+\+Linear\+\_\+\+System Class Reference}
+\label{classFD__Linear__System}\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+
+
+Class provides matrix resulting from finite difference discretization of 2D Poisson\textquotesingle{}s equation on a square. Resulting systems equals FE discretization if courants elements are used.  
+
+
+
+
+{\ttfamily \#include $<$F\+D\+\_\+linear\+\_\+system.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFD__Linear__System_acc7017959d0634a8ea7137b31ddc5b58}\label{classFD__Linear__System_acc7017959d0634a8ea7137b31ddc5b58}} 
+\mbox{\hyperlink{classFD__Linear__System_acc7017959d0634a8ea7137b31ddc5b58}{F\+D\+\_\+\+Linerar\+\_\+\+System}} ()=delete
+\begin{DoxyCompactList}\small\item\em deletes default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFD__Linear__System_a468ed4f5d475fdf24a931f8bed1b468d}{F\+D\+\_\+\+Linear\+\_\+\+System}} (const int N, const double h)
+\begin{DoxyCompactList}\small\item\em Construct a new fd linear system object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFD__Linear__System_a751694ea10d32e771355bd849851a3e9}{get\+\_\+dofs}} () const
+\item 
+void \mbox{\hyperlink{classFD__Linear__System_a610566c9c6085bae586f9fe1337fe48c}{get\+\_\+crs\+\_\+matrix\+\_\+vectors}} (std\+::vector$<$ double $>$ \&values, std\+::vector$<$ int $>$ \&col\+\_\+indices, std\+::vector$<$ int $>$ \&row\+\_\+indices) const
+\begin{DoxyCompactList}\small\item\em Get the crs matrix vectors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFD__Linear__System_a3af7fbe86ec2e792156d84df7d7b8e6f}{get\+\_\+test\+\_\+vector}} (std\+::vector$<$ double $>$ \&test\+\_\+vector) const
+\begin{DoxyCompactList}\small\item\em Get the test vector. Vector is the row sum of the matrix entries. Useful for testing your crs-\/matrix vector multiplication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFD__Linear__System_a3d2155127cc429c97b965867b513b8bf}{get\+\_\+x}} (std\+::vector$<$ double $>$ \&x) const
+\begin{DoxyCompactList}\small\item\em Get the x vector of the FD linear system Ax = b. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFD__Linear__System_afef1a0fde94661b29aa5f741d52855b1}{get\+\_\+b}} (std\+::vector$<$ double $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Gets the right hand side of FD system Ax = b. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class provides matrix resulting from finite difference discretization of 2D Poisson\textquotesingle{}s equation on a square. Resulting systems equals FE discretization if courants elements are used. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFD__Linear__System_a468ed4f5d475fdf24a931f8bed1b468d}\label{classFD__Linear__System_a468ed4f5d475fdf24a931f8bed1b468d}} 
+\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}!F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}!F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+\subsubsection{\texorpdfstring{F\+D\+\_\+\+Linear\+\_\+\+System()}{FD\_Linear\_System()}}
+{\footnotesize\ttfamily F\+D\+\_\+\+Linear\+\_\+\+System\+::\+F\+D\+\_\+\+Linear\+\_\+\+System (\begin{DoxyParamCaption}\item[{const int}]{N,  }\item[{const double}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new fd linear system object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Number of inner points per dimension \\
+\hline
+{\em h} & Stepsize or mesh width \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFD__Linear__System_afef1a0fde94661b29aa5f741d52855b1}\label{classFD__Linear__System_afef1a0fde94661b29aa5f741d52855b1}} 
+\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}!get\+\_\+b@{get\+\_\+b}}
+\index{get\+\_\+b@{get\+\_\+b}!F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+\subsubsection{\texorpdfstring{get\+\_\+b()}{get\_b()}}
+{\footnotesize\ttfamily void F\+D\+\_\+\+Linear\+\_\+\+System\+::get\+\_\+b (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{b }\end{DoxyParamCaption}) const}
+
+
+
+Gets the right hand side of FD system Ax = b. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em b} & arbitrary double vector \\
+\hline
+\mbox{\tt out}  & {\em b} & holds the right hand side \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFD__Linear__System_a610566c9c6085bae586f9fe1337fe48c}\label{classFD__Linear__System_a610566c9c6085bae586f9fe1337fe48c}} 
+\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}!get\+\_\+crs\+\_\+matrix\+\_\+vectors@{get\+\_\+crs\+\_\+matrix\+\_\+vectors}}
+\index{get\+\_\+crs\+\_\+matrix\+\_\+vectors@{get\+\_\+crs\+\_\+matrix\+\_\+vectors}!F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+\subsubsection{\texorpdfstring{get\+\_\+crs\+\_\+matrix\+\_\+vectors()}{get\_crs\_matrix\_vectors()}}
+{\footnotesize\ttfamily void F\+D\+\_\+\+Linear\+\_\+\+System\+::get\+\_\+crs\+\_\+matrix\+\_\+vectors (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{values,  }\item[{std\+::vector$<$ int $>$ \&}]{col\+\_\+indices,  }\item[{std\+::vector$<$ int $>$ \&}]{row\+\_\+indices }\end{DoxyParamCaption}) const}
+
+
+
+Get the crs matrix vectors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & arbitrary double vector \\
+\hline
+\mbox{\tt out}  & {\em values} & holds non-\/zero entries of F\+D-\/\+System matrix \\
+\hline
+\mbox{\tt in}  & {\em col\+\_\+indices} & arbitrary int vector \\
+\hline
+\mbox{\tt out}  & {\em col\+\_\+indices} & holds column indices of non-\/zero elements \\
+\hline
+\mbox{\tt in}  & {\em row\+\_\+indices} & arbitrary int vector \\
+\hline
+\mbox{\tt out}  & {\em row\+\_\+indices} & holds row indices of non-\/zero elements \\
+\hline
+\end{DoxyParams}
+resize vectors
+
+for-\/loop over rows of Matrix \mbox{\Hypertarget{classFD__Linear__System_a751694ea10d32e771355bd849851a3e9}\label{classFD__Linear__System_a751694ea10d32e771355bd849851a3e9}} 
+\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}!get\+\_\+dofs@{get\+\_\+dofs}}
+\index{get\+\_\+dofs@{get\+\_\+dofs}!F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+\subsubsection{\texorpdfstring{get\+\_\+dofs()}{get\_dofs()}}
+{\footnotesize\ttfamily int F\+D\+\_\+\+Linear\+\_\+\+System\+::get\+\_\+dofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Number of Degrees of freedom of system 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFD__Linear__System_a3af7fbe86ec2e792156d84df7d7b8e6f}\label{classFD__Linear__System_a3af7fbe86ec2e792156d84df7d7b8e6f}} 
+\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}!get\+\_\+test\+\_\+vector@{get\+\_\+test\+\_\+vector}}
+\index{get\+\_\+test\+\_\+vector@{get\+\_\+test\+\_\+vector}!F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+\subsubsection{\texorpdfstring{get\+\_\+test\+\_\+vector()}{get\_test\_vector()}}
+{\footnotesize\ttfamily void F\+D\+\_\+\+Linear\+\_\+\+System\+::get\+\_\+test\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{test\+\_\+vector }\end{DoxyParamCaption}) const}
+
+
+
+Get the test vector. Vector is the row sum of the matrix entries. Useful for testing your crs-\/matrix vector multiplication. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em test\+\_\+vector} & arbitrary double vector \\
+\hline
+\mbox{\tt out}  & {\em test\+\_\+vector} & holds the row sum on matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFD__Linear__System_a3d2155127cc429c97b965867b513b8bf}\label{classFD__Linear__System_a3d2155127cc429c97b965867b513b8bf}} 
+\index{F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}!get\+\_\+x@{get\+\_\+x}}
+\index{get\+\_\+x@{get\+\_\+x}!F\+D\+\_\+\+Linear\+\_\+\+System@{F\+D\+\_\+\+Linear\+\_\+\+System}}
+\subsubsection{\texorpdfstring{get\+\_\+x()}{get\_x()}}
+{\footnotesize\ttfamily void F\+D\+\_\+\+Linear\+\_\+\+System\+::get\+\_\+x (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{x }\end{DoxyParamCaption}) const}
+
+
+
+Get the x vector of the FD linear system Ax = b. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & arbitrary double vector \\
+\hline
+\mbox{\tt out}  & {\em x} & holds the the solution of the system \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+example/\mbox{\hyperlink{FD__linear__system_8h}{F\+D\+\_\+linear\+\_\+system.\+h}}\item 
+example/\mbox{\hyperlink{FD__linear__system_8cpp}{F\+D\+\_\+linear\+\_\+system.\+cpp}}\end{DoxyCompactItemize}

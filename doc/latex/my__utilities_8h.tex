@@ -1,0 +1,90 @@
+\hypertarget{my__utilities_8h}{}\section{example/my\+\_\+utilities.h File Reference}
+\label{my__utilities_8h}\index{example/my\+\_\+utilities.\+h@{example/my\+\_\+utilities.\+h}}
+
+
+Shows usage of function templates. Provided function templates may be useful.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename array\+\_\+type $>$ }\\void \mbox{\hyperlink{my__utilities_8h_a9f8921565f2896dbfbb900aff7077a6b}{print\+\_\+array}} (const array\+\_\+type \&array, const int array\+\_\+lenght, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Prints the content of array on console in a structured way. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Vector $>$ }\\void \mbox{\hyperlink{my__utilities_8h_a55567baae7c71addd82621f24136dcf9}{print\+\_\+vector}} (const Vector \&v, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Prints vector on console in structured fashion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Shows usage of function templates. Provided function templates may be useful. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Rau (\href{mailto:thomas1.rau@uni-bayreuth.de}{\tt thomas1.\+rau@uni-\/bayreuth.\+de}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/03-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{my__utilities_8h_a9f8921565f2896dbfbb900aff7077a6b}\label{my__utilities_8h_a9f8921565f2896dbfbb900aff7077a6b}} 
+\index{my\+\_\+utilities.\+h@{my\+\_\+utilities.\+h}!print\+\_\+array@{print\+\_\+array}}
+\index{print\+\_\+array@{print\+\_\+array}!my\+\_\+utilities.\+h@{my\+\_\+utilities.\+h}}
+\subsubsection{\texorpdfstring{print\+\_\+array()}{print\_array()}}
+{\footnotesize\ttfamily template$<$typename array\+\_\+type $>$ \\
+void print\+\_\+array (\begin{DoxyParamCaption}\item[{const array\+\_\+type \&}]{array,  }\item[{const int}]{array\+\_\+lenght,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Prints the content of array on console in a structured way. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em array\+\_\+type} & Some type which behaves like an array meaning it provides the \mbox{[}\mbox{]} operator of elementwise access. Implemented for\+:
+\begin{DoxyItemize}
+\item std\+::vector$<$double$>$ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array holding some data to be printed \\
+\hline
+{\em array\+\_\+lenght} & length of array. \\
+\hline
+{\em name} & Name of array to be printed on console\\
+\hline
+\end{DoxyParams}
+Since definition of fuction template is in cpp file,
+
+Define fuctiontemplate. It means you provide a recipe to the compiler on how to build a fuction. \mbox{\Hypertarget{my__utilities_8h_a55567baae7c71addd82621f24136dcf9}\label{my__utilities_8h_a55567baae7c71addd82621f24136dcf9}} 
+\index{my\+\_\+utilities.\+h@{my\+\_\+utilities.\+h}!print\+\_\+vector@{print\+\_\+vector}}
+\index{print\+\_\+vector@{print\+\_\+vector}!my\+\_\+utilities.\+h@{my\+\_\+utilities.\+h}}
+\subsubsection{\texorpdfstring{print\+\_\+vector()}{print\_vector()}}
+{\footnotesize\ttfamily template$<$typename Vector $>$ \\
+void print\+\_\+vector (\begin{DoxyParamCaption}\item[{const Vector \&}]{v,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Prints vector on console in structured fashion. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Vector} & Class/structure with public member values and dimension. values is provides array like reading access to elements via \mbox{[}\mbox{]} operator dimension describes the number of elements stored in values. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & some vector, \\
+\hline
+{\em name} & name to be printed on console\\
+\hline
+\end{DoxyParams}
+As long as you implement to the interface described in tparam you can use this function to print your vector version on the console. You may find them useful. 
