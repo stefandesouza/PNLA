@@ -33,8 +33,6 @@ iostream
 -
 cmath
 -
-string
--
 vector_seq.h
 -
 

@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++11 -Wall -fopenmp   CMakeFiles/test_matrix.dir/test_matrix.cpp.o  -o test_matrix ../libpnla.a 
+/usr/bin/c++   -std=c++11 -Wall -fopenmp -O3   CMakeFiles/test_matrix.dir/test_matrix.cpp.o  -o test_matrix ../libpnla.a 

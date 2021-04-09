@@ -1,17 +1,18 @@
-Test_vectors_default 14 0.000236113
-Test_vectors_dim_20 14 0.000233293
-Test_vectors_dim_1000 8 0.000419925
-Test_vectors_dim_10000 8 0.00115429
-Test_matrix_default 3 0.00136698
-Test_matrix_dim_20 2 0.00171929
-Test_matrix_dim_1000 2 0.374235
+Test_vectors_default 19 0.000236348
+Test_vectors_dim_20 16 0.000404544
+Test_vectors_dim_1000 9 0.00133523
+Test_vectors_dim_10000 10 0.000411704
+Test_matrix_default 8 0.000828968
+Test_matrix_dim_20 4 0.00268167
+Test_matrix_dim_1000 3 0.00971888
 Test_matrix_dim_10000 2 51.2213
-Test_pcg_default 0 0
-Test_pcg_dim_20 0 0
-Test_pcg_dim_1000 0 0
+Test_pcg_default 5 0.00124006
+Test_pcg_dim_20 2 0.575755
+Test_pcg_dim_1000 1 7.44146
 Test_pcg_dim_10000 0 0
+Test_matrix_dim_100 2 0.00406825
+Test_pcg_dim_100 2 0.0425717
+Test_vectors_dim_40000 2 0.00421356
+Test_matrix_dim_200 2 0.00680076
+Test_pcg_dim_200 2 0.238191
 ---
-Test_pcg_default
-Test_pcg_dim_20
-Test_pcg_dim_1000
-Test_pcg_dim_10000
