@@ -23,7 +23,7 @@ namespace pnla{
     struct parallelVector {
     
             int dimension;
-            std::shared_ptr<double[]> values;
+            std::unique_ptr<double[]> values;
             
             /**
              * @brief Allocares memory to the pointer
@@ -31,7 +31,7 @@ namespace pnla{
              * @param pointer 
              * @param dim 
              */
-            void allocate(std::shared_ptr<double []> &pointer, const int dim); //Declaring the allocate function
+            void allocate(std::unique_ptr<double []> &pointer, const int dim); //Declaring the allocate function
 
             parallelVector(){
             }

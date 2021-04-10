@@ -30,11 +30,11 @@ namespace pnla{
         }
     }
 
-    void allocate(std::shared_ptr<double []> &pointer,const int dim){
+    void allocate(std::unique_ptr<double []> &pointer,const int dim){
         pointer.reset(new double[dim]);
     }
 
-    void allocate(std::shared_ptr<int []> &pointer,const int dim){
+    void allocate(std::unique_ptr<int []> &pointer,const int dim){
         pointer.reset(new int[dim]);
     }          
 

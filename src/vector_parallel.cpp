@@ -50,7 +50,7 @@ namespace pnla{
                 
     }
 
-    void parallelVector::allocate(std::shared_ptr<double []> &pointer,const int dim){
+    void parallelVector::allocate(std::unique_ptr<double []> &pointer,const int dim){
                     pointer.reset(new double[dim]);
     }
 

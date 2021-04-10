@@ -27,15 +27,15 @@ namespace pnla{
      * @param pointer 
      * @param dim 
      */
-    void allocate(std::shared_ptr<double []> &pointer,const int dim);
-    void allocate(std::shared_ptr<int []> &pointer,const int dim);
+    void allocate(std::unique_ptr<double []> &pointer,const int dim);
+    void allocate(std::unique_ptr<int []> &pointer,const int dim);
 
 
     struct parallelMatrix {
         int numberOfRows;
-        std::shared_ptr<double[]> Values;
-        std::shared_ptr<int[]> Columns;
-        std::shared_ptr<int[]> Rows;
+        std::unique_ptr<double[]> Values;
+        std::unique_ptr<int[]> Columns;
+        std::unique_ptr<int[]> Rows;
 
         
 
