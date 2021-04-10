@@ -1,23 +1,23 @@
-Start testing: Apr 09 16:39 CEST
+Start testing: Apr 10 17:52 CEST
 ----------------------------------------------------------
 1/9 Testing: Test_vectors_default
 1/9 Test: Test_vectors_default
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_vectors"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_vectors_default" start time: Apr 09 16:39 CEST
+"Test_vectors_default" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Testing Sequential Vectors
-The time taken in microseconds: 18
+The time taken in microseconds: 8
 All sequential tests passed
 Testing Parallel Vectors
-The time taken in microseconds: 363
+The time taken in microseconds: 6013
 All parallel tests passed
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_vectors_default" end time: Apr 09 16:39 CEST
+"Test_vectors_default" end time: Apr 10 17:52 CEST
 "Test_vectors_default" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -25,20 +25,20 @@ Test Passed.
 2/9 Test: Test_matrix_default
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_matrix"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_matrix_default" start time: Apr 09 16:39 CEST
+"Test_matrix_default" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Test Sequential Matrix
-The time taken in microseconds: 2
+The time taken in microseconds: 1
 All sequential tests passed
 Test Parallel Matrix
-The time taken in microseconds: 24
+The time taken in microseconds: 23
 All sequential tests passed
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_matrix_default" end time: Apr 09 16:39 CEST
+"Test_matrix_default" end time: Apr 10 17:52 CEST
 "Test_matrix_default" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -46,7 +46,7 @@ Test Passed.
 3/9 Test: Test_pcg_default
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_pcg"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_pcg_default" start time: Apr 09 16:39 CEST
+"Test_pcg_default" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Test PCG with sequential implementations
@@ -57,7 +57,7 @@ The time taken in milliseconds: 0
 All sequential tests passed
 Test PCG with parallel implementations
 The number of points is: 10
-The norm of Ax-b is: 8.33636e-15
+The norm of Ax-b is: 8.74271e-15
 The number of iterations taken: 44
 The time taken in milliseconds: 2
 All parallel tests passed
@@ -65,7 +65,7 @@ All parallel tests passed
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_pcg_default" end time: Apr 09 16:39 CEST
+"Test_pcg_default" end time: Apr 10 17:52 CEST
 "Test_pcg_default" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -73,20 +73,20 @@ Test Passed.
 4/9 Test: Test_vectors_dim_10000
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_vectors" "10000"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_vectors_dim_10000" start time: Apr 09 16:39 CEST
+"Test_vectors_dim_10000" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Testing Sequential Vectors
-The time taken in microseconds: 546
+The time taken in microseconds: 452
 All sequential tests passed
 Testing Parallel Vectors
-The time taken in microseconds: 417
+The time taken in microseconds: 11713
 All parallel tests passed
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_vectors_dim_10000" end time: Apr 09 16:39 CEST
+"Test_vectors_dim_10000" end time: Apr 10 17:52 CEST
 "Test_vectors_dim_10000" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -94,20 +94,20 @@ Test Passed.
 5/9 Test: Test_matrix_dim_100
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_matrix" "100"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_matrix_dim_100" start time: Apr 09 16:39 CEST
+"Test_matrix_dim_100" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Test Sequential Matrix
-The time taken in microseconds: 129
+The time taken in microseconds: 107
 All sequential tests passed
 Test Parallel Matrix
-The time taken in microseconds: 42
+The time taken in microseconds: 39
 All sequential tests passed
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_matrix_dim_100" end time: Apr 09 16:39 CEST
+"Test_matrix_dim_100" end time: Apr 10 17:52 CEST
 "Test_matrix_dim_100" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -115,26 +115,26 @@ Test Passed.
 6/9 Test: Test_pcg_dim_100
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_pcg" "100"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_pcg_dim_100" start time: Apr 09 16:39 CEST
+"Test_pcg_dim_100" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Test PCG with sequential implementations
 The number of points is: 100
 The norm of Ax-b is: 1.82541e-13
 The number of iterations taken: 423
-The time taken in milliseconds: 48
+The time taken in milliseconds: 46
 All sequential tests passed
 Test PCG with parallel implementations
 The number of points is: 100
-The norm of Ax-b is: 1.81036e-13
+The norm of Ax-b is: 1.82074e-13
 The number of iterations taken: 423
-The time taken in milliseconds: 25
+The time taken in milliseconds: 23
 All parallel tests passed
 <end of output>
 Test time =   0.09 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_pcg_dim_100" end time: Apr 09 16:39 CEST
+"Test_pcg_dim_100" end time: Apr 10 17:52 CEST
 "Test_pcg_dim_100" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -142,20 +142,20 @@ Test Passed.
 7/9 Test: Test_vectors_dim_40000
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_vectors" "40000"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_vectors_dim_40000" start time: Apr 09 16:39 CEST
+"Test_vectors_dim_40000" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Testing Sequential Vectors
-The time taken in microseconds: 1607
+The time taken in microseconds: 1645
 All sequential tests passed
 Testing Parallel Vectors
-The time taken in microseconds: 4540
+The time taken in microseconds: 14755
 All parallel tests passed
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_vectors_dim_40000" end time: Apr 09 16:39 CEST
+"Test_vectors_dim_40000" end time: Apr 10 17:52 CEST
 "Test_vectors_dim_40000" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -163,20 +163,20 @@ Test Passed.
 8/9 Test: Test_matrix_dim_200
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_matrix" "200"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_matrix_dim_200" start time: Apr 09 16:39 CEST
+"Test_matrix_dim_200" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Test Sequential Matrix
-The time taken in microseconds: 429
+The time taken in microseconds: 357
 All sequential tests passed
 Test Parallel Matrix
-The time taken in microseconds: 153
+The time taken in microseconds: 116
 All sequential tests passed
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_matrix_dim_200" end time: Apr 09 16:39 CEST
+"Test_matrix_dim_200" end time: Apr 10 17:52 CEST
 "Test_matrix_dim_200" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -184,27 +184,27 @@ Test Passed.
 9/9 Test: Test_pcg_dim_200
 Command: "/home/nuss/91/bt717591/PNLA_Stefan/build/tests/test_pcg" "200"
 Directory: /home/nuss/91/bt717591/PNLA_Stefan/build/tests
-"Test_pcg_dim_200" start time: Apr 09 16:39 CEST
+"Test_pcg_dim_200" start time: Apr 10 17:52 CEST
 Output:
 ----------------------------------------------------------
 Test PCG with sequential implementations
 The number of points is: 200
 The norm of Ax-b is: 4.98968e-13
 The number of iterations taken: 820
-The time taken in milliseconds: 363
+The time taken in milliseconds: 379
 All sequential tests passed
 Test PCG with parallel implementations
 The number of points is: 200
-The norm of Ax-b is: 5.00786e-13
+The norm of Ax-b is: 5.03378e-13
 The number of iterations taken: 820
-The time taken in milliseconds: 94
+The time taken in milliseconds: 122
 All parallel tests passed
 <end of output>
-Test time =   0.48 sec
+Test time =   0.52 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_pcg_dim_200" end time: Apr 09 16:39 CEST
+"Test_pcg_dim_200" end time: Apr 10 17:52 CEST
 "Test_pcg_dim_200" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 09 16:39 CEST
+End testing: Apr 10 17:52 CEST

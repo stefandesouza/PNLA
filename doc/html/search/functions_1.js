@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dotproduct',['dotProduct',['../classpnla_1_1VectorRn.html#a70c593f6a54a97cbdcab7bad1da3b6f0',1,'pnla::VectorRn']]]
+  ['copyvector',['copyVector',['../vector__seq_8h.html#a835733bb6a983a35ea69bea78a5f8ce8',1,'pnla']]]
 ];

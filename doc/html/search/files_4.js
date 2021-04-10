@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vector_5fseq_2ecpp',['vector_seq.cpp',['../vector__seq_8cpp.html',1,'']]],
-  ['vector_5fseq_2eh',['vector_seq.h',['../vector__seq_8h.html',1,'']]]
+  ['test_5fmatrix_2ecpp',['test_matrix.cpp',['../test__matrix_8cpp.html',1,'']]],
+  ['test_5fpcg_2ecpp',['test_pcg.cpp',['../test__pcg_8cpp.html',1,'']]],
+  ['test_5fvectors_2ecpp',['test_vectors.cpp',['../test__vectors_8cpp.html',1,'']]]
 ];

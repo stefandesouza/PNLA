@@ -1,0 +1,88 @@
+\hypertarget{matrix__parallel_8h}{}\section{include/matrix\+\_\+parallel.h File Reference}
+\label{matrix__parallel_8h}\index{include/matrix\+\_\+parallel.\+h@{include/matrix\+\_\+parallel.\+h}}
+
+
+Header file for storing the C\+RS matrix with parallel functionality.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$vector\+\_\+parallel.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpnla_1_1parallelMatrix}{pnla\+::parallel\+Matrix}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{matrix__parallel_8h_ab2d1f83e9c47ef416345b042831bb12e}{pnla\+::allocate}} (std\+::shared\+\_\+ptr$<$ double \mbox{[}$\,$\mbox{]}$>$ \&pointer, const int dim)
+\begin{DoxyCompactList}\small\item\em Declares allocators for double array references and int array references. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{matrix__parallel_8h_a6f9e2b7d57e8f800e8e7a5e3634390fa}\label{matrix__parallel_8h_a6f9e2b7d57e8f800e8e7a5e3634390fa}} 
+void {\bfseries pnla\+::allocate} (std\+::shared\+\_\+ptr$<$ int \mbox{[}$\,$\mbox{]}$>$ \&pointer, const int dim)
+\item 
+void \mbox{\hyperlink{matrix__parallel_8h_a1d08781b1a6445f9ea5db9ae286a3d94}{pnla\+::scale\+Vector\+Matrix\+Multiplication}} (parallel\+Vector \&Vector1, const parallel\+Vector \&Vector2, const parallel\+Matrix \&Matrix, const double alpha, const double beta)
+\begin{DoxyCompactList}\small\item\em Performs scalar vector multiplication on Vector1 with beta, add adds it to scaled vector matrix multiplication of Vector2 on Matrix with alpha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for storing the C\+RS matrix with parallel functionality. 
+
+\begin{DoxyAuthor}{Author}
+Stefan de Souza (\href{mailto:stefan.de-souza@uni-bayreuth.de}{\tt stefan.\+de-\/souza@uni-\/bayreuth.\+de}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/03-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{matrix__parallel_8h_file_ab2d1f83e9c47ef416345b042831bb12e}\label{matrix__parallel_8h_file_ab2d1f83e9c47ef416345b042831bb12e}} 
+\index{matrix\+\_\+parallel.\+h@{matrix\+\_\+parallel.\+h}!allocate@{allocate}}
+\index{allocate@{allocate}!matrix\+\_\+parallel.\+h@{matrix\+\_\+parallel.\+h}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily void pnla\+::allocate (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ double \mbox{[}$\,$\mbox{]}$>$ \&}]{pointer,  }\item[{const int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Declares allocators for double array references and int array references. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & \\
+\hline
+{\em dim} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{matrix__parallel_8h_file_a1d08781b1a6445f9ea5db9ae286a3d94}\label{matrix__parallel_8h_file_a1d08781b1a6445f9ea5db9ae286a3d94}} 
+\index{matrix\+\_\+parallel.\+h@{matrix\+\_\+parallel.\+h}!scale\+Vector\+Matrix\+Multiplication@{scale\+Vector\+Matrix\+Multiplication}}
+\index{scale\+Vector\+Matrix\+Multiplication@{scale\+Vector\+Matrix\+Multiplication}!matrix\+\_\+parallel.\+h@{matrix\+\_\+parallel.\+h}}
+\subsubsection{\texorpdfstring{scale\+Vector\+Matrix\+Multiplication()}{scaleVectorMatrixMultiplication()}}
+{\footnotesize\ttfamily void pnla\+::scale\+Vector\+Matrix\+Multiplication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpnla_1_1parallelVector}{parallel\+Vector}} \&}]{Vector1,  }\item[{const \mbox{\hyperlink{structpnla_1_1parallelVector}{parallel\+Vector}} \&}]{Vector2,  }\item[{const \mbox{\hyperlink{structpnla_1_1parallelMatrix}{parallel\+Matrix}} \&}]{Matrix,  }\item[{const double}]{alpha,  }\item[{const double}]{beta }\end{DoxyParamCaption})}
+
+
+
+Performs scalar vector multiplication on Vector1 with beta, add adds it to scaled vector matrix multiplication of Vector2 on Matrix with alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector1} & \\
+\hline
+{\em Vector2} & \\
+\hline
+{\em Matrix} & \\
+\hline
+{\em alpha} & \\
+\hline
+{\em beta} & \\
+\hline
+\end{DoxyParams}

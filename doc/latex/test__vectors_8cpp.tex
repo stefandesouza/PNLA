@@ -2,26 +2,53 @@
 \label{test__vectors_8cpp}\index{tests/test\+\_\+vectors.\+cpp@{tests/test\+\_\+vectors.\+cpp}}
 
 
-Bare bone structure of a small unit test for your vector routines.  
+Test routines for vectors.  
 
 
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$limits$>$}\newline
 {\ttfamily \#include $<$vector\+\_\+seq.\+h$>$}\newline
+{\ttfamily \#include $<$vector\+\_\+parallel.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Vector $>$ }\\int \mbox{\hyperlink{test__vectors_8cpp_adcd129a1015d63b7637117dd2cf65af4}{test\+\_\+vector\+\_\+routines}} (const int dimension, const double epsilon)
-\begin{DoxyCompactList}\small\item\em Bare bone function template for testing. The beauty of templates is, that you have to write this test only once and then it should work for all of your vector versions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Vector $>$ }\\int \mbox{\hyperlink{test__vectors_8cpp_a6b24926e695f254b78772ed974b9ff41}{test\+\_\+constant\+Initialization}} (const int dimension, const double epsilon)
+\begin{DoxyCompactList}\small\item\em Tests my functions for the sequential and parallel vectors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test__vectors_8cpp_a5020aa9ac859a7bd4b800c6dfc693439}\label{test__vectors_8cpp_a5020aa9ac859a7bd4b800c6dfc693439}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+linear\+Initialization} (const int dimension, const double epsilon)
+\item 
+\mbox{\Hypertarget{test__vectors_8cpp_adb3ec808138535e952b7a155ad0fb872}\label{test__vectors_8cpp_adb3ec808138535e952b7a155ad0fb872}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+vector\+Initialization} (const int dimension, const double epsilon)
+\item 
+\mbox{\Hypertarget{test__vectors_8cpp_a25a64766f30fddd34071003a9f56d524}\label{test__vectors_8cpp_a25a64766f30fddd34071003a9f56d524}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+copy\+Vector} (const int dimension, const double epsilon)
+\item 
+\mbox{\Hypertarget{test__vectors_8cpp_a9f1e0f57ce0565fd7d7c99282b6b95e8}\label{test__vectors_8cpp_a9f1e0f57ce0565fd7d7c99282b6b95e8}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+scale\+Vector} (const int dimension, const double epsilon)
+\item 
+\mbox{\Hypertarget{test__vectors_8cpp_a1ae2399cd83c366fb7a7026f87ae6d95}\label{test__vectors_8cpp_a1ae2399cd83c366fb7a7026f87ae6d95}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+dot\+Product} (const int dimension, const double epsilon)
+\item 
+\mbox{\Hypertarget{test__vectors_8cpp_a52e4408f4c848c73fc03ac05113d66ed}\label{test__vectors_8cpp_a52e4408f4c848c73fc03ac05113d66ed}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+norm} (const int dimension, const double epsilon)
+\item 
+\mbox{\Hypertarget{test__vectors_8cpp_aa124ed6650c1a75de45133960c3e30b7}\label{test__vectors_8cpp_aa124ed6650c1a75de45133960c3e30b7}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+scaled\+Addition} (const int dimension, const double epsilon)
+\item 
+\mbox{\Hypertarget{test__vectors_8cpp_adcd129a1015d63b7637117dd2cf65af4}\label{test__vectors_8cpp_adcd129a1015d63b7637117dd2cf65af4}} 
+{\footnotesize template$<$typename Vector $>$ }\\int {\bfseries test\+\_\+vector\+\_\+routines} (const int dimension, const double epsilon)
+\item 
 int \mbox{\hyperlink{test__vectors_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Test Programm for pnla\textquotesingle{}s vector structs/classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Bare bone structure of a small unit test for your vector routines. 
+Test routines for vectors. 
 
 \begin{DoxyAuthor}{Author}
-Thomas Rau (\href{mailto:thomas1.rau@uni-bayreuth.de}{\tt thomas1.\+rau@uni-\/bayreuth.\+de}) 
+Stefan de Souza (\href{mailto:stefan.de-souza@uni-bayreuth.de}{\tt stefan.\+de-\/souza@uni-\/bayreuth.\+de}) 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
 0.\+1 
@@ -48,7 +75,6 @@ Test Programm for pnla\textquotesingle{}s vector structs/classes.
 
 \begin{DoxyParams}{Parameters}
 {\em argc} & Number of arguments ~\newline
-~\newline
 \\
 \hline
 {\em argv} & Programm argument list \\
@@ -57,16 +83,16 @@ Test Programm for pnla\textquotesingle{}s vector structs/classes.
 \begin{DoxyReturn}{Returns}
 int On sucess = 0, if return value != 0 some test failed 
 \end{DoxyReturn}
-call of test\+\_\+vector should look something like this \mbox{\Hypertarget{test__vectors_8cpp_adcd129a1015d63b7637117dd2cf65af4}\label{test__vectors_8cpp_adcd129a1015d63b7637117dd2cf65af4}} 
-\index{test\+\_\+vectors.\+cpp@{test\+\_\+vectors.\+cpp}!test\+\_\+vector\+\_\+routines@{test\+\_\+vector\+\_\+routines}}
-\index{test\+\_\+vector\+\_\+routines@{test\+\_\+vector\+\_\+routines}!test\+\_\+vectors.\+cpp@{test\+\_\+vectors.\+cpp}}
-\subsubsection{\texorpdfstring{test\+\_\+vector\+\_\+routines()}{test\_vector\_routines()}}
+\mbox{\Hypertarget{test__vectors_8cpp_a6b24926e695f254b78772ed974b9ff41}\label{test__vectors_8cpp_a6b24926e695f254b78772ed974b9ff41}} 
+\index{test\+\_\+vectors.\+cpp@{test\+\_\+vectors.\+cpp}!test\+\_\+constant\+Initialization@{test\+\_\+constant\+Initialization}}
+\index{test\+\_\+constant\+Initialization@{test\+\_\+constant\+Initialization}!test\+\_\+vectors.\+cpp@{test\+\_\+vectors.\+cpp}}
+\subsubsection{\texorpdfstring{test\+\_\+constant\+Initialization()}{test\_constantInitialization()}}
 {\footnotesize\ttfamily template$<$typename Vector $>$ \\
-int test\+\_\+vector\+\_\+routines (\begin{DoxyParamCaption}\item[{const int}]{dimension,  }\item[{const double}]{epsilon }\end{DoxyParamCaption})}
+int test\+\_\+constant\+Initialization (\begin{DoxyParamCaption}\item[{const int}]{dimension,  }\item[{const double}]{epsilon }\end{DoxyParamCaption})}
 
 
 
-Bare bone function template for testing. The beauty of templates is, that you have to write this test only once and then it should work for all of your vector versions. 
+Tests my functions for the sequential and parallel vectors. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
@@ -83,4 +109,3 @@ Bare bone function template for testing. The beauty of templates is, that you ha
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
-Here you have to implement testing routines for pnla\textquotesingle{}s vector structures/classes. If your test fails, set test success to a non zero value; 

@@ -1,0 +1,90 @@
+\hypertarget{test__pcg_8cpp}{}\section{tests/test\+\_\+pcg.cpp File Reference}
+\label{test__pcg_8cpp}\index{tests/test\+\_\+pcg.\+cpp@{tests/test\+\_\+pcg.\+cpp}}
+
+
+Unit test for the pcg implementation.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$F\+D\+\_\+linear\+\_\+system.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$pcg.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Vector , typename Matrix $>$ }\\int \mbox{\hyperlink{test__pcg_8cpp_a1d937727bf8e7bf8ff81b9e512638fd2}{test\+\_\+poisson}} (const int points, const double epsilon, const int max\+Iterations)
+\begin{DoxyCompactList}\small\item\em Tests my P\+CG implementation with sequential and parallel variants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test__pcg_8cpp_a29426f10fdb9aa43b70588e408d52da7}\label{test__pcg_8cpp_a29426f10fdb9aa43b70588e408d52da7}} 
+{\footnotesize template$<$typename Vector , typename Matrix $>$ }\\int {\bfseries test\+\_\+pcg} (const int points, const double epsilon, const int max\+Iterations)
+\item 
+int \mbox{\hyperlink{test__pcg_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Test Programm for pnla\textquotesingle{}s matrix structs/classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unit test for the pcg implementation. 
+
+\begin{DoxyAuthor}{Author}
+Stefan de Souza (\href{mailto:stefan.de-souza@uni-bayreuth.de}{\tt stefan.\+de-\/souza@uni-\/bayreuth.\+de}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/03-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__pcg_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{test__pcg_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{test\+\_\+pcg.\+cpp@{test\+\_\+pcg.\+cpp}!main@{main}}
+\index{main@{main}!test\+\_\+pcg.\+cpp@{test\+\_\+pcg.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Test Programm for pnla\textquotesingle{}s matrix structs/classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments ~\newline
+\\
+\hline
+{\em argv} & Programm argument list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int On sucess = 0, if return value != 0 some test failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test__pcg_8cpp_a1d937727bf8e7bf8ff81b9e512638fd2}\label{test__pcg_8cpp_a1d937727bf8e7bf8ff81b9e512638fd2}} 
+\index{test\+\_\+pcg.\+cpp@{test\+\_\+pcg.\+cpp}!test\+\_\+poisson@{test\+\_\+poisson}}
+\index{test\+\_\+poisson@{test\+\_\+poisson}!test\+\_\+pcg.\+cpp@{test\+\_\+pcg.\+cpp}}
+\subsubsection{\texorpdfstring{test\+\_\+poisson()}{test\_poisson()}}
+{\footnotesize\ttfamily template$<$typename Vector , typename Matrix $>$ \\
+int test\+\_\+poisson (\begin{DoxyParamCaption}\item[{const int}]{points,  }\item[{const double}]{epsilon,  }\item[{const int}]{max\+Iterations }\end{DoxyParamCaption})}
+
+
+
+Tests my P\+CG implementation with sequential and parallel variants. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Matrix} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em dimension} & \\
+\hline
+{\em epsilon} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}

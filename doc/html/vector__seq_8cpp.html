@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Stefan&#39; Project: src/vector_seq.cpp File Reference</title>
+<title>Stefan&#39;s PCG implementation: src/vector_seq.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Stefan&#39; Project
+   <div id="projectname">Stefan&#39;s PCG implementation
    </div>
-   <div id="projectbrief">I&#39;ll figure this out later</div>
+   <div id="projectbrief">Provides sequential and parallel implementations for the PCG algorithm of linear systems</div>
   </td>
  </tr>
  </tbody>
@@ -67,31 +67,227 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">vector_seq.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Barebone structure of a pnla source file.  
+<p>Implementation of sequential matrix routines.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="vector__seq_8h_source.html">vector_seq.h</a>&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacepnla"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepnla.html">pnla</a></td></tr>
-<tr class="memdesc:namespacepnla"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remember, every header needs it's guard ! <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a835733bb6a983a35ea69bea78a5f8ce8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__seq_8h.html#a835733bb6a983a35ea69bea78a5f8ce8">pnla::copyVector</a> (sequentialVector &amp;Vector1, const sequentialVector &amp;Vector2)</td></tr>
+<tr class="memdesc:a835733bb6a983a35ea69bea78a5f8ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the contents of 'Vector2' onto 'Vector1'.  <a href="vector__seq_8h.html#a835733bb6a983a35ea69bea78a5f8ce8">More...</a><br /></td></tr>
+<tr class="separator:a835733bb6a983a35ea69bea78a5f8ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad716982fee314485bac248c350f46c94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__seq_8h.html#ad716982fee314485bac248c350f46c94">pnla::scaleVector</a> (sequentialVector &amp;givenVector, const double alpha)</td></tr>
+<tr class="memdesc:ad716982fee314485bac248c350f46c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales a given vector by a double 'alpha'.  <a href="vector__seq_8h.html#ad716982fee314485bac248c350f46c94">More...</a><br /></td></tr>
+<tr class="separator:ad716982fee314485bac248c350f46c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca1de89c554b6ac47ec936c8a69566aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__seq_8h.html#aca1de89c554b6ac47ec936c8a69566aa">pnla::dotProduct</a> (const sequentialVector &amp;Vector1, const sequentialVector &amp;Vector2)</td></tr>
+<tr class="memdesc:aca1de89c554b6ac47ec936c8a69566aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the dot product of 'Vector1' with 'Vector2'.  <a href="vector__seq_8h.html#aca1de89c554b6ac47ec936c8a69566aa">More...</a><br /></td></tr>
+<tr class="separator:aca1de89c554b6ac47ec936c8a69566aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad344ace50cf9b57d907df811d51e199c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__seq_8h.html#ad344ace50cf9b57d907df811d51e199c">pnla::norm</a> (const sequentialVector &amp;Vector1)</td></tr>
+<tr class="memdesc:ad344ace50cf9b57d907df811d51e199c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the norm of a given vector.  <a href="vector__seq_8h.html#ad344ace50cf9b57d907df811d51e199c">More...</a><br /></td></tr>
+<tr class="separator:ad344ace50cf9b57d907df811d51e199c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc059e887b71d2cebec162a8f0deb58e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__seq_8h.html#adc059e887b71d2cebec162a8f0deb58e">pnla::scaledAddition</a> (const sequentialVector &amp;Vector1, sequentialVector &amp;Vector2, const double alpha)</td></tr>
+<tr class="memdesc:adc059e887b71d2cebec162a8f0deb58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales the 'Vector1' by a double 'alpha' and adds it to 'Vector2'.  <a href="vector__seq_8h.html#adc059e887b71d2cebec162a8f0deb58e">More...</a><br /></td></tr>
+<tr class="separator:adc059e887b71d2cebec162a8f0deb58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Barebone structure of a pnla source file. </p>
+<div class="textblock"><p>Implementation of sequential matrix routines. </p>
+<p>Implementation of sequential vector routines.</p>
+<p>Implementation of parallel vector routines.</p>
+<p>Implementation of pcg.</p>
 <dl class="section author"><dt>Author</dt><dd>Stefan de Souza (<a href="#" onclick="location.href='mai'+'lto:'+'ste'+'fa'+'n.d'+'e-'+'sou'+'za'+'@un'+'i-'+'bay'+'re'+'uth'+'.d'+'e'; return false;">stefa<span style="display: none;">.nosp@m.</span>n.de<span style="display: none;">.nosp@m.</span>-souz<span style="display: none;">.nosp@m.</span>a@un<span style="display: none;">.nosp@m.</span>i-bay<span style="display: none;">.nosp@m.</span>reut<span style="display: none;">.nosp@m.</span>h.de</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-03-18</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="file_a835733bb6a983a35ea69bea78a5f8ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a835733bb6a983a35ea69bea78a5f8ce8">&#9670;&nbsp;</a></span>copyVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pnla::copyVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Vector1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Vector2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies the contents of 'Vector2' onto 'Vector1'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Vector1</td><td></td></tr>
+    <tr><td class="paramname">Vector2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_aca1de89c554b6ac47ec936c8a69566aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_aca1de89c554b6ac47ec936c8a69566aa">&#9670;&nbsp;</a></span>dotProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double pnla::dotProduct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Vector1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Vector2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the dot product of 'Vector1' with 'Vector2'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Vector1</td><td></td></tr>
+    <tr><td class="paramname">Vector2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_ad344ace50cf9b57d907df811d51e199c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_ad344ace50cf9b57d907df811d51e199c">&#9670;&nbsp;</a></span>norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double pnla::norm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Vector1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the norm of a given vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">givenVector</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_adc059e887b71d2cebec162a8f0deb58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_adc059e887b71d2cebec162a8f0deb58e">&#9670;&nbsp;</a></span>scaledAddition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pnla::scaledAddition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Vector1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Vector2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scales the 'Vector1' by a double 'alpha' and adds it to 'Vector2'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Vector1</td><td></td></tr>
+    <tr><td class="paramname">Vector2</td><td></td></tr>
+    <tr><td class="paramname">alpha</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_ad716982fee314485bac248c350f46c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_ad716982fee314485bac248c350f46c94">&#9670;&nbsp;</a></span>scaleVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pnla::scaleVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpnla_1_1sequentialVector.html">sequentialVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>givenVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scales a given vector by a double 'alpha'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">givenVector</td><td></td></tr>
+    <tr><td class="paramname">alpha</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

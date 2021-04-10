@@ -1,0 +1,60 @@
+\hypertarget{pcg_8h}{}\section{include/pcg.h File Reference}
+\label{pcg_8h}\index{include/pcg.\+h@{include/pcg.\+h}}
+
+
+Implements the P\+CG iterative linear system solver.  
+
+
+{\ttfamily \#include $<$vector\+\_\+seq.\+h$>$}\newline
+{\ttfamily \#include $<$matrix\+\_\+seq.\+h$>$}\newline
+{\ttfamily \#include $<$vector\+\_\+parallel.\+h$>$}\newline
+{\ttfamily \#include $<$matrix\+\_\+parallel.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Vector , typename Matrix $>$ }\\int \mbox{\hyperlink{pcg_8h_ae50cfd28097f2cd74254142295dd1220}{pnla\+::\+P\+CG}} (Vector \&x\+Vector, const Vector \&rhs\+Vector, const Matrix \&crs\+Matrix, const double epsilon, const int max\+Iterations)
+\begin{DoxyCompactList}\small\item\em Solves the linear system Ax=b using the P\+CG algorithm, and returns the number of iterations taken. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the P\+CG iterative linear system solver. 
+
+\begin{DoxyAuthor}{Author}
+Stefan de Souza (\href{mailto:stefan.de-souza@uni-bayreuth.de}{\tt stefan.\+de-\/souza@uni-\/bayreuth.\+de}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/03-\/25
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pcg_8h_file_ae50cfd28097f2cd74254142295dd1220}\label{pcg_8h_file_ae50cfd28097f2cd74254142295dd1220}} 
+\index{pcg.\+h@{pcg.\+h}!P\+CG@{P\+CG}}
+\index{P\+CG@{P\+CG}!pcg.\+h@{pcg.\+h}}
+\subsubsection{\texorpdfstring{P\+C\+G()}{PCG()}}
+{\footnotesize\ttfamily template$<$typename Vector , typename Matrix $>$ \\
+int pnla\+::\+P\+CG (\begin{DoxyParamCaption}\item[{Vector \&}]{x\+Vector,  }\item[{const Vector \&}]{rhs\+Vector,  }\item[{const Matrix \&}]{crs\+Matrix,  }\item[{const double}]{epsilon,  }\item[{const int}]{max\+Iterations }\end{DoxyParamCaption})}
+
+
+
+Solves the linear system Ax=b using the P\+CG algorithm, and returns the number of iterations taken. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Vector} & Dummy vector to hold the solution \\
+\hline
+{\em rhs\+Vector} & The vector b \\
+\hline
+{\em crs\+Matrix} & The matrix A \\
+\hline
+{\em epsilon} & The tolerance \\
+\hline
+{\em max\+Iterations} & The maximum number of iterations allowed \\
+\hline
+\end{DoxyParams}

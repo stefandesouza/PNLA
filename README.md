@@ -1,8 +1,6 @@
-#Template for Practical Course on Parallel Numerical Methods 20/21
+#Stefan's PCG implementation - Practical Course on Parallel Numerical Methods 20/21
 
-
-Every software project should have a README file. Here you have a md-file formate example.  
-Alternativly, a puristic txt-format can be used if you don't care for eye candy.
+Provides sequential and parallel implementations of the PCG algorithm
 
 ***
 ##Build Project

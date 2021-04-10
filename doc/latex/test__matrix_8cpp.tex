@@ -1,0 +1,91 @@
+\hypertarget{test__matrix_8cpp}{}\section{tests/test\+\_\+matrix.cpp File Reference}
+\label{test__matrix_8cpp}\index{tests/test\+\_\+matrix.\+cpp@{tests/test\+\_\+matrix.\+cpp}}
+
+
+Unit test for the C\+RS matrix.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$matrix\+\_\+seq.\+h$>$}\newline
+{\ttfamily \#include $<$matrix\+\_\+parallel.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$F\+D\+\_\+linear\+\_\+system.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Vector , typename Matrix $>$ }\\int \mbox{\hyperlink{test__matrix_8cpp_adc0f92d16f8948b60ce45415c0342eb8}{test\+\_\+scalar\+Vector\+Multiplication}} (const double epsilon, const int dimension)
+\begin{DoxyCompactList}\small\item\em Tests my sequential and parallel implementations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test__matrix_8cpp_a692a69518f5c5da702560dd60b7ab2aa}\label{test__matrix_8cpp_a692a69518f5c5da702560dd60b7ab2aa}} 
+{\footnotesize template$<$typename Vector , typename Matrix $>$ }\\int {\bfseries test\+\_\+matrix\+\_\+routines} (const int dimension, const double epsilon)
+\item 
+int \mbox{\hyperlink{test__matrix_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Test Programm for pnla\textquotesingle{}s matrix structs/classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unit test for the C\+RS matrix. 
+
+\begin{DoxyAuthor}{Author}
+Stefan de Souza (\href{mailto:stefan.de-souza@uni-bayreuth.de}{\tt stefan.\+de-\/souza@uni-\/bayreuth.\+de}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/03-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__matrix_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{test__matrix_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{test\+\_\+matrix.\+cpp@{test\+\_\+matrix.\+cpp}!main@{main}}
+\index{main@{main}!test\+\_\+matrix.\+cpp@{test\+\_\+matrix.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Test Programm for pnla\textquotesingle{}s matrix structs/classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments ~\newline
+\\
+\hline
+{\em argv} & Programm argument list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int On sucess = 0, if return value != 0 some test failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test__matrix_8cpp_adc0f92d16f8948b60ce45415c0342eb8}\label{test__matrix_8cpp_adc0f92d16f8948b60ce45415c0342eb8}} 
+\index{test\+\_\+matrix.\+cpp@{test\+\_\+matrix.\+cpp}!test\+\_\+scalar\+Vector\+Multiplication@{test\+\_\+scalar\+Vector\+Multiplication}}
+\index{test\+\_\+scalar\+Vector\+Multiplication@{test\+\_\+scalar\+Vector\+Multiplication}!test\+\_\+matrix.\+cpp@{test\+\_\+matrix.\+cpp}}
+\subsubsection{\texorpdfstring{test\+\_\+scalar\+Vector\+Multiplication()}{test\_scalarVectorMultiplication()}}
+{\footnotesize\ttfamily template$<$typename Vector , typename Matrix $>$ \\
+int test\+\_\+scalar\+Vector\+Multiplication (\begin{DoxyParamCaption}\item[{const double}]{epsilon,  }\item[{const int}]{dimension }\end{DoxyParamCaption})}
+
+
+
+Tests my sequential and parallel implementations. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Matrix} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em dimension} & \\
+\hline
+{\em epsilon} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}

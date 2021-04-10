@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['myclass',['MyClass',['../classMyClass.html',1,'']]]
+  ['parallelmatrix',['parallelMatrix',['../structpnla_1_1parallelMatrix.html',1,'pnla']]],
+  ['parallelvector',['parallelVector',['../structpnla_1_1parallelVector.html',1,'pnla']]]
 ];

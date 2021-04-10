@@ -2,28 +2,37 @@
 \label{vector__seq_8h}\index{include/vector\+\_\+seq.\+h@{include/vector\+\_\+seq.\+h}}
 
 
-Barebone structure of a pnla header file.  
+Declaration of the parallel vector class and routines.  
 
 
 {\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include $<$cmath$>$}\newline
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classpnla_1_1VectorRn}{pnla\+::\+Vector\+Rn}}
+struct \mbox{\hyperlink{structpnla_1_1sequentialVector}{pnla\+::sequential\+Vector}}
 \end{DoxyCompactItemize}
-\subsection*{Namespaces}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespacepnla}{pnla}}
-\begin{DoxyCompactList}\small\item\em Remember, every header needs it\textquotesingle{}s guard ! \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{vector__seq_8h_a835733bb6a983a35ea69bea78a5f8ce8}{pnla\+::copy\+Vector}} (sequential\+Vector \&Vector1, const sequential\+Vector \&Vector2)
+\begin{DoxyCompactList}\small\item\em Copies the contents of \textquotesingle{}Vector2\textquotesingle{} onto \textquotesingle{}Vector1\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vector__seq_8h_ad716982fee314485bac248c350f46c94}{pnla\+::scale\+Vector}} (sequential\+Vector \&given\+Vector, const double alpha)
+\begin{DoxyCompactList}\small\item\em Scales a given vector by a double \textquotesingle{}alpha\textquotesingle{}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{vector__seq_8h_aca1de89c554b6ac47ec936c8a69566aa}{pnla\+::dot\+Product}} (const sequential\+Vector \&Vector1, const sequential\+Vector \&Vector2)
+\begin{DoxyCompactList}\small\item\em Calculates the dot product of \textquotesingle{}Vector1\textquotesingle{} with \textquotesingle{}Vector2\textquotesingle{}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{vector__seq_8h_ad344ace50cf9b57d907df811d51e199c}{pnla\+::norm}} (const sequential\+Vector \&Vector1)
+\begin{DoxyCompactList}\small\item\em Finds the norm of a given vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vector__seq_8h_adc059e887b71d2cebec162a8f0deb58e}{pnla\+::scaled\+Addition}} (const sequential\+Vector \&Vector1, sequential\+Vector \&Vector2, const double alpha)
+\begin{DoxyCompactList}\small\item\em Scales the \textquotesingle{}Vector1\textquotesingle{} by a double \textquotesingle{}alpha\textquotesingle{} and adds it to \textquotesingle{}Vector2\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Barebone structure of a pnla header file. 
+Declaration of the parallel vector class and routines. 
+
+Declaration of the sequential vector class and routines.
 
 \begin{DoxyAuthor}{Author}
-Thomas Rau (\href{mailto:thomas1.rau@uni-bayreuth.de}{\tt thomas1.\+rau@uni-\/bayreuth.\+de}) 
+Stefan de Souza (\href{mailto:stefan.de-souza@uni-bayreuth.de}{\tt stefan.\+de-\/souza@uni-\/bayreuth.\+de}) 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
 0.\+1 
@@ -34,3 +43,91 @@ Thomas Rau (\href{mailto:thomas1.rau@uni-bayreuth.de}{\tt thomas1.\+rau@uni-\/ba
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2021 
 \end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{vector__seq_8h_file_a835733bb6a983a35ea69bea78a5f8ce8}\label{vector__seq_8h_file_a835733bb6a983a35ea69bea78a5f8ce8}} 
+\index{vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}!copy\+Vector@{copy\+Vector}}
+\index{copy\+Vector@{copy\+Vector}!vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}}
+\subsubsection{\texorpdfstring{copy\+Vector()}{copyVector()}}
+{\footnotesize\ttfamily void pnla\+::copy\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{Vector1,  }\item[{const \mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{Vector2 }\end{DoxyParamCaption})}
+
+
+
+Copies the contents of \textquotesingle{}Vector2\textquotesingle{} onto \textquotesingle{}Vector1\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector1} & \\
+\hline
+{\em Vector2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector__seq_8h_file_aca1de89c554b6ac47ec936c8a69566aa}\label{vector__seq_8h_file_aca1de89c554b6ac47ec936c8a69566aa}} 
+\index{vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}!dot\+Product@{dot\+Product}}
+\index{dot\+Product@{dot\+Product}!vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}}
+\subsubsection{\texorpdfstring{dot\+Product()}{dotProduct()}}
+{\footnotesize\ttfamily double pnla\+::dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{Vector1,  }\item[{const \mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{Vector2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the dot product of \textquotesingle{}Vector1\textquotesingle{} with \textquotesingle{}Vector2\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector1} & \\
+\hline
+{\em Vector2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector__seq_8h_file_ad344ace50cf9b57d907df811d51e199c}\label{vector__seq_8h_file_ad344ace50cf9b57d907df811d51e199c}} 
+\index{vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}!norm@{norm}}
+\index{norm@{norm}!vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}}
+\subsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily double pnla\+::norm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{Vector1 }\end{DoxyParamCaption})}
+
+
+
+Finds the norm of a given vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+Vector} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector__seq_8h_file_adc059e887b71d2cebec162a8f0deb58e}\label{vector__seq_8h_file_adc059e887b71d2cebec162a8f0deb58e}} 
+\index{vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}!scaled\+Addition@{scaled\+Addition}}
+\index{scaled\+Addition@{scaled\+Addition}!vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}}
+\subsubsection{\texorpdfstring{scaled\+Addition()}{scaledAddition()}}
+{\footnotesize\ttfamily void pnla\+::scaled\+Addition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{Vector1,  }\item[{\mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{Vector2,  }\item[{const double}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Scales the \textquotesingle{}Vector1\textquotesingle{} by a double \textquotesingle{}alpha\textquotesingle{} and adds it to \textquotesingle{}Vector2\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vector1} & \\
+\hline
+{\em Vector2} & \\
+\hline
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector__seq_8h_file_ad716982fee314485bac248c350f46c94}\label{vector__seq_8h_file_ad716982fee314485bac248c350f46c94}} 
+\index{vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}!scale\+Vector@{scale\+Vector}}
+\index{scale\+Vector@{scale\+Vector}!vector\+\_\+seq.\+h@{vector\+\_\+seq.\+h}}
+\subsubsection{\texorpdfstring{scale\+Vector()}{scaleVector()}}
+{\footnotesize\ttfamily void pnla\+::scale\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpnla_1_1sequentialVector}{sequential\+Vector}} \&}]{given\+Vector,  }\item[{const double}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Scales a given vector by a double \textquotesingle{}alpha\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+Vector} & \\
+\hline
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
