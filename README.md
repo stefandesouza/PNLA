@@ -1,4 +1,4 @@
-#Stefan's PCG implementation - Practical Course on Parallel Numerical Methods 20/21
+#PCG implementation - Practical Course on Parallel Numerical Methods 20/21
 
 Provides sequential and parallel implementations of the PCG algorithm
 
@@ -16,4 +16,4 @@ make
 Example usages can be found in "example".
 
 ***
-Tesing routines will implemented by you in the "tests" file.
+Tesing routines are implemented in the "tests" file.
