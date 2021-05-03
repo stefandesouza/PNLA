@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../tests/../include/vector_parallel.h
+../include/vector_parallel.h
 vector
 -
 omp.h
@@ -16,7 +16,7 @@ memory
 utility
 -
 
-../tests/../include/vector_seq.h
+../include/vector_seq.h
 vector
 -
 

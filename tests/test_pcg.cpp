@@ -95,8 +95,16 @@ int main(int argc, char *argv[])
 
     if(argc == 3)
 	{
-        maxIterations = std::stoi(argv[2]);
+        dim = std::stoi(argv[1]);
+        omp_set_num_threads(std::stoi(argv[2]));
 	}
+
+    if(argc == 4)
+	{
+        maxIterations = std::stoi(argv[3]);
+	}
+
+
 
     const double epsilon(std::numeric_limits<double>::epsilon()); 
     
@@ -112,7 +120,7 @@ int main(int argc, char *argv[])
     if(test_result_seq ==0 )
         std::cout<< "All sequential tests passed" <<std::endl;
     
-    omp_set_num_threads(8);
+    
 
     std::cout<<"Test PCG with parallel implementations"<<std::endl;
     test_result_parallel = test_pcg<pnla::parallelVector,pnla::parallelMatrix>(dim, epsilon, maxIterations);

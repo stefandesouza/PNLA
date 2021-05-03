@@ -191,7 +191,7 @@ int main(int argc, char *argv[])
 	{
         dim = std::stoi(argv[1]);
 	}
-    omp_set_num_threads(8);
+
 
     const double epsilon(std::numeric_limits<double>::epsilon()); 
     int test_result_seq = 0;

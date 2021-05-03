@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-../tests/../include/FD_linear_system.h
+../include/FD_linear_system.h
 vector
 -
 cmath
 -
 
-../tests/../include/matrix_parallel.h
+../include/matrix_parallel.h
 vector
 -
 iostream
@@ -26,7 +26,7 @@ memory
 utility
 -
 
-../tests/../include/matrix_seq.h
+../include/matrix_seq.h
 vector
 -
 iostream
@@ -36,7 +36,7 @@ cmath
 vector_seq.h
 -
 
-../tests/../include/vector_parallel.h
+../include/vector_parallel.h
 vector
 -
 omp.h
@@ -46,7 +46,7 @@ memory
 utility
 -
 
-../tests/../include/vector_seq.h
+../include/vector_seq.h
 vector
 -
 
